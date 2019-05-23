@@ -4,6 +4,7 @@ import Home from './views/Home.vue'
 import Main from './views/Main.vue'
 import Table from './views/nav1/Table.vue'
 import Form from './views/nav1/Form.vue'
+import maintenance from './views/nav1/maintenance.vue'
 import user from './views/nav1/user.vue'
 import Page4 from './views/nav2/Page4.vue'
 import Page5 from './views/nav2/Page5.vue'
@@ -34,6 +35,7 @@ let routes = [
             { path: '/table', component: Table, name: 'Table' },
             { path: '/form', component: Form, name: 'Form' },
             { path: '/user', component: user, name: '列表' },
+            { path: '/maintenance', component: maintenance, name: 'maintenance' },
         ]
     },
     {
