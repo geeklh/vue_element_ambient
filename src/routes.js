@@ -1,7 +1,8 @@
 import Login from './views/Login.vue'
 import NotFound from './views/404.vue'
 import navHeader from './views/navHeader.vue'
-import datadownload from './views/datadownload.vue'
+import indexHome from './views/homepage/indexPage.vue'
+import datadownload from './views/dataDownload/downloadindexpage.vue'
 import Home from './views/Home.vue'
 import Main from './views/Main.vue'
 import Table from './views/nav1/Table.vue'
@@ -28,10 +29,13 @@ let routes = [
     },
     //{ path: '/main', component: Main },
     {
-        path:'/',
-        component:navHeader,
-        name:'首页',
+        path: '/',
+        component: navHeader,
+        name: '首页',
         iconCls: 'el-icon-d-caret',
+        children: [
+            { path: '/map', component: indexHome, name: 'map' },
+        ]
     },
     {
         path: '/',
@@ -84,10 +88,13 @@ let routes = [
         ]
     },
     {
-        path:'/',
-        component:navHeader,
-        name:'数据下载',
+        path: '/',
+        component: navHeader,
+        name: '数据下载',
         iconCls: 'el-icon-setting',
+        children: [
+            { path: '/datadown', component: datadownload, name: 'datadown' },
+        ]
     },
 
     {
